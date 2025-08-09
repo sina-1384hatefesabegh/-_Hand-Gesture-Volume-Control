@@ -38,12 +38,19 @@ pip install -r requirements.txt
 ```
 
 -📦 Requirements.txt : 
+
     -opencv-python
+    
     -cvzone
+    
     -mediapipe
+    
     -pycaw
+    
     -comtypes
+    
     -numpy
+-
 
 
 

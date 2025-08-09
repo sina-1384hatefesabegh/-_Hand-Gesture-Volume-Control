@@ -24,11 +24,23 @@ This method combines:
 - **Pose Estimation (MediaPipe Hands)**
 - **Signal Mapping (NumPy interpolation)**
 - **System Audio Control (PyCaw)**
+-
+
 ###########################################################################
+
+
+
+
+
 testing : https://www.youtube.com/watch?v=czzw8jrtobU
 
-
 آزمایش پروژه در یوتیوب : https://www.youtube.com/watch?v=czzw8jrtobU
+
+
+
+
+
+
 ###########################################################################
 ---
 # کنترل صدای سیستم با حرکات دست 🎵✋

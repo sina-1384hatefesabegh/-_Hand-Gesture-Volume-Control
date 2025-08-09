@@ -1,51 +1,57 @@
-# -_Hand-Gesture-Volume-Control
-در این ریپازیتوری یاد میگیرید که چطور با دست و حرکات انگشت اشاره و شست صدا رو کم یا زیاد کنید
 # Hand Gesture Volume Control 🎵✋
+Control your **system volume** using **hand gestures** in real-time with **computer vision** and **AI**.
 
-This project allows you to control your system volume using **hand gestures** in real-time with **computer vision** and **AI**.
+[![Watch on YouTube](https://img.shields.io/badge/YouTube-Demo-red?logo=youtube)](https://www.youtube.com/watch?v=czzw8jrtobU)
+
+---
 
 ## 📜 Description
-The application detects the position of your thumb and index finger using **MediaPipe Hands** and **OpenCV**, then calculates the distance between them to adjust the system volume via **PyCaw**.
+This application detects the position of your **thumb** and **index finger** using **MediaPipe Hands** and **OpenCV**, then calculates the distance between them to adjust the system volume via **PyCaw**.
 
-- **Close fingers together** → volume decreases 🔉
-- **Spread fingers apart** → volume increases 🔊
+- **Close fingers together** → volume decreases 🔉  
+- **Spread fingers apart** → volume increases 🔊  
+
+---
 
 ## 🧠 How It Works (Scientific & AI-based)
-1. **Video Capture**: The webcam captures frames in real-time.
-2. **Hand Detection**: The **MediaPipe Hands** model identifies 21 key landmarks of the hand using deep learning.
-3. **Landmark Extraction**: We focus on landmark ID `4` (thumb tip) and `8` (index finger tip).
-4. **Distance Calculation**: Using Euclidean distance (Pythagoras theorem) between thumb and index finger.
-5. **Mapping Range**: The measured distance is mapped (interpolated) to the system volume range using NumPy interpolation.
-6. **Volume Control**: The **PyCaw** library communicates with the Windows audio API to set the master volume in decibels.
-7. **Visual Feedback**: Circles and lines are drawn between fingers to visualize the control.
+1. **Video Capture**: Webcam captures frames in real-time.
+2. **Hand Detection**: The **MediaPipe Hands** deep learning model identifies 21 key landmarks of the hand.
+3. **Landmark Extraction**: Focus on landmark ID `4` (thumb tip) and `8` (index finger tip).
+4. **Distance Calculation**: Using Euclidean distance (Pythagoras theorem).
+5. **Mapping Range**: Distance is mapped to the system volume range using NumPy interpolation.
+6. **Volume Control**: **PyCaw** communicates with Windows audio API to set master volume (in dB).
+7. **Visual Feedback**: Circles and lines are drawn between fingers to visualize control.
 
-This method combines:
-- **Computer Vision (OpenCV)**
-- **Pose Estimation (MediaPipe Hands)**
-- **Signal Mapping (NumPy interpolation)**
-- **System Audio Control (PyCaw)**
--
+**Technologies Used**:
+- Computer Vision (**OpenCV**)
+- Pose Estimation (**MediaPipe Hands**)
+- Signal Mapping (**NumPy interpolation**)
+- System Audio Control (**PyCaw**)
 
-###########################################################################
+---
+
+## 🖥 Installation
+Make sure you have **Python 3.8+** installed, then run:
+
+```bash
+pip install -r requirements.txt
+```
+
+-📦 Requirements.txt : 
+    -opencv-python
+    -cvzone
+    -mediapipe
+    -pycaw
+    -comtypes
+    -numpy
 
 
 
-
-
-testing : https://www.youtube.com/watch?v=czzw8jrtobU
-
-آزمایش پروژه در یوتیوب : https://www.youtube.com/watch?v=czzw8jrtobU
-
-
-
-
-
-
-###########################################################################
 ---
 # کنترل صدای سیستم با حرکات دست 🎵✋
 
 این پروژه به شما امکان می‌دهد که **صدای سیستم** را با استفاده از **ژست دست** و به صورت **بلادرنگ** (Real-Time) کنترل کنید.
+[![ویدیو آزمایش پروژه در یوتویوب](https://img.shields.io/badge/YouTube-Demo-red?logo=youtube)](https://www.youtube.com/watch?v=czzw8jrtobU)
 
 ## 📜 توضیحات
 برنامه با استفاده از **MediaPipe Hands** و **OpenCV** موقعیت انگشت شست و اشاره را شناسایی کرده و فاصله بین آن‌ها را محاسبه می‌کند. سپس با استفاده از **PyCaw** صدای سیستم تغییر می‌کند.
